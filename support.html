@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIDIDOIT — Support</title>
+  <meta name="description" content="Support for DIDIDOIT, the iOS dashboard app for tracking monitors and shared dashboards.">
+  <style>
+    :root {
+      --bg: #141619;
+      --card: #1f2129;
+      --border: #333842;
+      --accent: #4d99e6;
+      --text: #ffffff;
+      --muted: #9aa3ad;
+      --green: #33cc66;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: #fff !important;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none !important;
+    }
+    .contact-btn:hover { opacity: 0.92; }
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    li { margin-bottom: 10px; }
+    li:last-child { margin-bottom: 0; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>DIDIDOIT</h1>
+      <p class="tagline">Monitor dashboards for home, work, and shared checklists.</p>
+    </header>
+
+    <section>
+      <h2>Contact support</h2>
+      <p>Questions, bugs, or feedback? Email us and include your iOS version and a short description of the issue.</p>
+      <!-- Replace the email below with your real support address before publishing -->
+      <a class="contact-btn" href="mailto:support@labapps.com?subject=DIDIDOIT%20Support">Email support</a>
+      <p style="margin-top:14px;font-size:0.9rem;color:var(--muted);">
+        <a href="mailto:support@labapps.com">support@labapps.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Common questions</h2>
+      <ul>
+        <li><strong>iCloud / sharing</strong> — Dashboard sharing requires an iCloud account on each device. Open Settings → Share with Others inside the app to invite collaborators or join a shared dashboard.</li>
+        <li><strong>Collaborators can’t see updates</strong> — Both users need internet access and iCloud signed in. Pull to refresh or reopen the app; changes may take a few seconds to sync.</li>
+        <li><strong>Daily notifications</strong> — Enable “Daily Status Update” in Settings for each dashboard and allow notifications when iOS prompts you.</li>
+        <li><strong>Data storage</strong> — Local dashboards are stored on your device. Shared dashboards sync through your private iCloud account via Apple CloudKit.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>App information</h2>
+      <p><strong>Platform:</strong> iPhone and iPad (iOS)</p>
+      <p><strong>Developer:</strong> LaBapps</p>
+      <p><strong>Bundle ID:</strong> com.LaBapps.Didido</p>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="y"></span> LaBapps. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
