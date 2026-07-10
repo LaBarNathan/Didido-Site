@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIDIDO? — Features</title>
+  <meta name="description" content="A feature overview page for DIDIDO?.">
+  <link rel="stylesheet" href="shell.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="shell-header">
+      <div class="status-shell">
+        <div class="status-row">
+          <div class="status-label">
+            <span class="status-prefix">DIDIDO? STATUS:</span>
+            <span class="status-value" data-status-value>Critical</span>
+          </div>
+          <div class="status-right">
+            <div class="status-percent" data-status-percent>0%</div>
+            <a class="home-button" href="index.html" aria-label="Go to Status Home">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 10.5 12 4l8 6.5"></path>
+                <path d="M7 10v9h10v-9"></path>
+              </svg>
+            </a>
+            <div class="menu">
+              <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open quick navigation" data-menu-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                </svg>
+              </button>
+              <div class="menu-panel" hidden data-menu-panel>
+                <a href="index.html">Status Home</a>
+                <a href="features.html" data-completes-monitor="features">Features</a>
+                <a href="updates.html" data-completes-monitor="updates">Recent Update</a>
+                <a href="developers.html" data-completes-monitor="developers">Developer Information</a>
+                <a href="support.html" data-completes-monitor="support">Support</a>
+                <a href="privacy.html" data-completes-monitor="privacy">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gauge" aria-label="Didido status progress bar">
+          <div class="gauge-fill">
+            <div class="segment segment-red" data-gauge-red></div>
+            <div class="segment segment-yellow" data-gauge-yellow hidden></div>
+            <div class="segment segment-green" data-gauge-green></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="page-hero">
+      <p class="eyebrow">Features</p>
+      <h1 class="page-title">DIDIDO?</h1>
+      <p class="page-subtitle">Track tasks and routines via custom monitors across different dashboards and collaborate with others!</p>
+    </header>
+
+    <main class="content-grid">
+      <section class="content-card">
+        <h2>Multiple Dashboards</h2>
+        <p>You can choose to create one or multiple dashboards to easily view your different monitors. Separate them by location, project, work, school or anything else! 
+          I personally use a dashboard for jobs that need to be done around the house, one for my car, pets, and another for my personal life goals.</p>
+        <p>Each dashboard can be shared via CloudKit! Your data is stored locally on your device and synced with others via iCloud. Users on a shared dashboard can create monitors
+          and mark them as completed to keep each other accountable! 
+        </p>
+      </section>
+
+      <section class="content-card content-card--screenshots">
+        <div class="screenshot-row">
+          <img src="images/features%20screenshots/new_dash_name.png" alt="Family and car dashboard example">
+          <img src="images/features%20screenshots/home_dash.png" alt="Home dashboard example">
+          <img src="images/features%20screenshots/garden_dash.png" alt="Garden dashboard example">
+        </div>
+      </section>
+
+      <section class="content-card">
+        <h2>Monitors</h2>
+        <p>Create custom monitors that represent a chore or problem that needs to be fixed. Monitors thrive on tasks that need to be completed every
+          couple of days, weeks, or months! Some examples include: replacing filters, appliance maintenance, cleaning rooms of the house, oil changes, the list goes on!
+        </p>
+        <p>
+          Creating a monitor is as easy as tapping the plus button in the top right corner of the dashboard and selecting "Create Monitor". From there, you can name your monitor,
+          set the frequency of the task, and adjust the warning settings (the time when a monitor will turn yellow indicating it is due soon).
+        </p>
+        <p> Due to recent feedback, Didido? now allows users to do a task or chore multiple times per day such as feeding a pet, brushing teeth, or taking medications. When users
+          select 'every 1 days', they can set specific times (in hours and minutes), or just an amount of times something needs to be done per day. 
+        </p>
+        <p> All monitors can be edited or deleted after creation by tapping the monitor name/completion date and then the pencil icon in the top right corner. Monitors can
+          also be moved across dashboards by tapping and holding the monitor and selecting 'move to' and the desired dashboard. Other editing options will also be available while
+          pressing and holding a monitor.
+        </p>
+      </section>
+
+      <section class="content-card content-card--screenshots">
+        <div class="screenshot-row">
+          <img src="images/features%20screenshots/family_car_dash.png" alt="Family and car dashboard example">
+          <img src="images/features%20screenshots/set_times_day.png" alt="Set times per day example">
+          <img src="images/features%20screenshots/move_monitor.png" alt="Move a monitor example">
+        </div>
+      </section>
+
+      <section class="content-card">
+        <h2>Status Bar</h2>
+        <p>The status bar at the top of the dashboard shows the percent of monitors that are not due yet. When a monitor is about to be due it will turn
+          yellow, and the corresponding percentage of the green part of the status bar will turn yellow. The percentage will not change until the monitor turns
+          red, at which point the yellow part of the status bar will turn red. When a monitor is tapped (not on the name or completion date), the monitor's 
+          completion date will be updated to the current date and time and it will return to green. 
+        </p>
+        <p>
+          The dashboard status name will adjust based on the percentage of monitors that are due. If no monitors are due, the status will read 'Excellent', if they are
+          all due, it will read 'Critical'. By clicking the rest of the monitors on the home page of this website, you can interact with the status bar that is also 
+          featured within the app. 
+        </p>
+      </section>
+
+      <section class="content-card content-card--screenshots">
+        <div class="screenshot-row">
+          <img src="images/features%20screenshots/excellent.png" alt="Excellent status example">
+          <img src="images/features%20screenshots/status_bar.png" alt="Good status bar example">
+          <img src="images/features%20screenshots/critical.png" alt="Critical status example">
+        </div>
+      </section>
+
+      <section class="content-card">
+        <h2>Optional Notifications</h2>
+        <p>Didido? does not bog you down with notifications like other apps. You select if and when you want to receive a notification with updates about your
+          monitors' status. Pick a time of day you will be available to complete monitors and when the notification hits, you can check what you have to do and 
+          mark them as completed! You can have a notification for each dashboard or none at all! The notification will only trigger if at least one monitor on 
+          the dashboard is due or overdue.
+        </p>
+        <p>
+          Soon Didido? will feature a by due monitor option that will send a notification anytime a monitor turns red or yellow, if the user decides to do so.
+        </p>
+      </section>
+
+      <section class="content-card content-card--screenshots">
+        <div class="screenshot-row">
+          <img src="images/features%20screenshots/notif_80.png" alt="80 percent status notification example">
+          <img src="images/features%20screenshots/set_notif.png" alt="Setting notification example">
+          <img src="images/features%20screenshots/notif_40.png" alt="40 percent status notification example">
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <p>&copy; <span id="y"></span> LaBapps. All rights reserved.</p>
+      <p><a href="index.html">Status Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+  </div>
+  <script src="shell.js"></script>
+</body>
+</html>

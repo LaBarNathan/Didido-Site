@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIDIDO? — Support</title>
+  <meta name="description" content="Support for DIDIDO?, the iOS dashboard app for tracking monitors and shared dashboards.">
+  <link rel="stylesheet" href="shell.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="shell-header">
+      <div class="status-shell">
+        <div class="status-row">
+          <div class="status-label">
+            <span class="status-prefix">DIDIDO? STATUS:</span>
+            <span class="status-value" data-status-value>Critical</span>
+          </div>
+          <div class="status-right">
+            <div class="status-percent" data-status-percent>0%</div>
+            <a class="home-button" href="index.html" aria-label="Go to Status Home">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 10.5 12 4l8 6.5"></path>
+                <path d="M7 10v9h10v-9"></path>
+              </svg>
+            </a>
+            <div class="menu">
+              <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open quick navigation" data-menu-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                </svg>
+              </button>
+              <div class="menu-panel" hidden data-menu-panel>
+                <a href="index.html">Status Home</a>
+                <a href="features.html" data-completes-monitor="features">Features</a>
+                <a href="updates.html" data-completes-monitor="updates">Recent Update</a>
+                <a href="developers.html" data-completes-monitor="developers">Developer Information</a>
+                <a href="support.html" data-completes-monitor="support">Support</a>
+                <a href="privacy.html" data-completes-monitor="privacy">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gauge" aria-label="Didido status progress bar">
+          <div class="gauge-fill">
+            <div class="segment segment-red" data-gauge-red></div>
+            <div class="segment segment-yellow" data-gauge-yellow hidden></div>
+            <div class="segment segment-green" data-gauge-green></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="page-hero">
+      <p class="eyebrow">Support</p>
+      <h1 class="page-title">DIDIDO?</h1>
+      <p class="page-subtitle">Questions, bugs, feedback, and the quickest ways to get help with the app.</p>
+    </header>
+
+    <main class="content-grid">
+      <section class="content-card">
+        <h2>Contact Support</h2>
+        <p>Questions, bugs, or feedback are easiest to solve when you include your iOS version and a short description of the issue.</p>
+        <a class="button-link" href="mailto:nathanlabar21@gmail.com?subject=DIDIDO?%20Support" data-completes-monitor="support">Email support</a>
+        <p style="margin-top:14px;"><a href="mailto:nathanlabar21@gmail.com">nathanlabar21@gmail.com</a></p>
+      </section>
+
+      <section class="content-card">
+        <h2>Common Questions</h2>
+        <ul>
+          <li><strong>iCloud / sharing</strong> — Dashboard sharing requires an iCloud account on each device. Open Settings → Share with Others inside the app to invite collaborators or join a shared dashboard.</li>
+          <li><strong>Collaborators can’t see updates</strong> — Both users need internet access and iCloud signed in. Pull to refresh or reopen the app; changes may take a few seconds to sync.</li>
+          <li><strong>Daily notifications</strong> — Enable “Daily Status Update” in Settings for each dashboard and allow notifications when iOS prompts you.</li>
+          <li><strong>Data storage</strong> — Local dashboards are stored on your device. Shared dashboards sync through your private iCloud account via Apple CloudKit.</li>
+        </ul>
+      </section>
+
+      <section class="content-card">
+        <h2>App Information</h2>
+        <p><strong>Platform:</strong> iPhone (iOS)</p>
+        <p><strong>Developer:</strong> Nathan LaBar</p>
+        <p><strong>Bundle ID:</strong> com.LaBapps.Didido</p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>&copy; <span id="y"></span> LaBapps. All rights reserved.</p>
+      <p><a href="index.html">Status Home</a> · <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+  </div>
+  <script src="shell.js"></script>
+</body>
+</html>

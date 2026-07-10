@@ -5,188 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DIDIDO? — Privacy Policy</title>
   <meta name="description" content="Privacy Policy for DIDIDO?, the iOS dashboard app for tracking monitors and shared dashboards.">
-  <style>
-    :root {
-      --bg: #141619;
-      --card: #1f2129;
-      --border: #333842;
-      --accent: #4d99e6;
-      --text: #ffffff;
-      --muted: #9aa3ad;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 32px 20px 48px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    h1 {
-      font-size: 1.5rem;
-      letter-spacing: 0.2em;
-      font-weight: 700;
-      margin: 0 0 8px;
-    }
-    .tagline {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-top: 8px;
-    }
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 22px;
-      margin-bottom: 16px;
-    }
-    h2 {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 12px;
-      font-weight: 600;
-    }
-    p { margin: 0 0 12px; }
-    p:last-child { margin-bottom: 0; }
-    ul {
-      margin: 0 0 12px;
-      padding-left: 1.2rem;
-    }
-    li { margin-bottom: 8px; }
-    li:last-child { margin-bottom: 0; }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.8rem;
-      margin-top: 28px;
-    }
-    .nav {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="shell.css">
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1>DIDIDO?</h1>
-      <p class="tagline">Privacy Policy</p>
-      <p class="meta">Effective date: June 2, 2026</p>
+    <div class="shell-header">
+      <div class="status-shell">
+        <div class="status-row">
+          <div class="status-label">
+            <span class="status-prefix">DIDIDO? STATUS:</span>
+            <span class="status-value" data-status-value>Critical</span>
+          </div>
+          <div class="status-right">
+            <div class="status-percent" data-status-percent>0%</div>
+            <a class="home-button" href="index.html" aria-label="Go to Status Home">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 10.5 12 4l8 6.5"></path>
+                <path d="M7 10v9h10v-9"></path>
+              </svg>
+            </a>
+            <div class="menu">
+              <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open quick navigation" data-menu-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                </svg>
+              </button>
+              <div class="menu-panel" hidden data-menu-panel>
+                <a href="index.html">Status Home</a>
+                <a href="features.html" data-completes-monitor="features">Features</a>
+                <a href="updates.html" data-completes-monitor="updates">Recent Update</a>
+                <a href="developers.html" data-completes-monitor="developers">Developer Information</a>
+                <a href="support.html" data-completes-monitor="support">Support</a>
+                <a href="privacy.html" data-completes-monitor="privacy">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gauge" aria-label="Didido status progress bar">
+          <div class="gauge-fill">
+            <div class="segment segment-red" data-gauge-red></div>
+            <div class="segment segment-yellow" data-gauge-yellow hidden></div>
+            <div class="segment segment-green" data-gauge-green></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="page-hero">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1 class="page-title">DIDIDO?</h1>
+      <p class="page-subtitle">Effective date: June 2, 2026</p>
     </header>
 
-    <p class="nav"><a href="index.html">Support</a> · Privacy Policy</p>
+    <main class="content-grid">
+      <section class="content-card">
+        <h2>Overview</h2>
+        <p>DIDIDO? (“the App”) is published by LaBapps (“we,” “us”). This Privacy Policy explains how information is handled when you use the App on iOS.</p>
+        <p>We designed the App so your dashboards and monitors stay under your control, with optional iCloud sharing when you choose to collaborate.</p>
+      </section>
 
-    <section>
-      <h2>Overview</h2>
-      <p>
-        DIDIDO? (“the App”) is published by LaBapps (“we,” “us”). This Privacy Policy explains how information is handled when you use the App on iOS.
-        We designed the App so your dashboards and monitors stay under your control, with optional iCloud sharing when you choose to collaborate.
-      </p>
-    </section>
+      <section class="content-card">
+        <h2>Information the App Stores</h2>
+        <p>Depending on how you use the App, the following information may be stored:</p>
+        <ul>
+          <li>Dashboard names and settings (including optional daily notification preferences)</li>
+          <li>Monitor details you create (name, icon, completion dates, intervals, and warning settings)</li>
+          <li>Sharing state for dashboards you share or join (for example, whether you are the owner or a collaborator)</li>
+        </ul>
+        <p>When you are not using shared dashboards, this information is stored locally on your device (for example, in the App’s on-device storage).</p>
+      </section>
 
-    <section>
-      <h2>Information the App stores</h2>
-      <p>Depending on how you use the App, the following information may be stored:</p>
-      <ul>
-        <li>Dashboard names and settings (including optional daily notification preferences)</li>
-        <li>Monitor details you create (name, icon, completion dates, intervals, and warning settings)</li>
-        <li>Sharing state for dashboards you share or join (for example, whether you are the owner or a collaborator)</li>
-      </ul>
-      <p>
-        When you are not using shared dashboards, this information is stored locally on your device (for example, in the App’s on-device storage).
-      </p>
-    </section>
+      <section class="content-card">
+        <h2>iCloud and Shared Dashboards</h2>
+        <p>If you share a dashboard or accept an invitation, the App uses <strong>Apple iCloud and CloudKit</strong> to sync monitor data with people you invite. That data is stored in your iCloud account and in shared zones accessible to participants you authorize through Apple’s sharing flow.</p>
+        <p>We do not operate our own servers for your monitor content. Apple processes and stores iCloud data according to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple’s Privacy Policy</a>. Collaborators you invite can view and edit monitors in shared dashboards according to the permissions granted through iCloud sharing.</p>
+      </section>
 
-    <section>
-      <h2>iCloud and shared dashboards</h2>
-      <p>
-        If you share a dashboard or accept an invitation, the App uses <strong>Apple iCloud and CloudKit</strong> to sync monitor data with people you invite.
-        That data is stored in your iCloud account and in shared zones accessible to participants you authorize through Apple’s sharing flow.
-      </p>
-      <p>
-        We do not operate our own servers for your monitor content. Apple processes and stores iCloud data according to
-        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple’s Privacy Policy</a>.
-        Collaborators you invite can view and edit monitors in shared dashboards according to the permissions granted through iCloud sharing.
-      </p>
-    </section>
+      <section class="content-card">
+        <h2>Notifications</h2>
+        <p>If you enable daily status updates, the App may schedule <strong>local notifications</strong> on your device based on your monitor data. Notification content is generated on your device.</p>
+        <p>You can turn off notifications per dashboard in Settings or disable notifications for the App in iOS Settings.</p>
+      </section>
 
-    <section>
-      <h2>Notifications</h2>
-      <p>
-        If you enable daily status updates, the App may schedule <strong>local notifications</strong> on your device based on your monitor data.
-        Notification content is generated on your device; 
-        You can turn off notifications per dashboard in Settings or disable notifications for the App in iOS Settings.
-      </p>
-    </section>
+      <section class="content-card">
+        <h2>What We Do Not Collect</h2>
+        <ul>
+          <li>We do not sell your personal information.</li>
+          <li>We do not use third-party advertising or analytics SDKs in the App to track you across other companies’ apps or websites.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>What we do not collect</h2>
-      <ul>
-        <li>We do not sell your personal information.</li>
-        <li>We do not use third-party advertising or analytics SDKs in the App to track you across other companies’ apps or websites.</li>
-      </ul>
-    </section>
+      <section class="content-card">
+        <h2>How You Can Control Your Data</h2>
+        <ul>
+          <li><strong>Local data:</strong> Delete monitors or dashboards in the App, or remove the App from your device to delete locally stored data.</li>
+          <li><strong>Shared dashboards:</strong> Owners can stop sharing; collaborators can leave a shared dashboard or save a local copy before leaving.</li>
+          <li><strong>iCloud data:</strong> Manage iCloud storage and shared items through your Apple ID and iCloud settings.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>How you can control your data</h2>
-      <ul>
-        <li><strong>Local data:</strong> Delete monitors or dashboards in the App, or remove the App from your device to delete locally stored data.</li>
-        <li><strong>Shared dashboards:</strong> Owners can stop sharing; collaborators can leave a shared dashboard or save a local copy before leaving.</li>
-        <li><strong>iCloud data:</strong> Manage iCloud storage and shared items through your Apple ID and iCloud settings.</li>
-      </ul>
-    </section>
+      <section class="content-card">
+        <h2>Children’s Privacy</h2>
+        <p>The App is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided information through the App, contact us and we will help address the request.</p>
+      </section>
 
-    <section>
-      <h2>Children’s privacy</h2>
-      <p>
-        The App is not directed at children under 13. We do not knowingly collect personal information from children.
-        If you believe a child has provided information through the App, contact us and we will help address the request.
-      </p>
-    </section>
+      <section class="content-card">
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. The effective date at the top will reflect the latest version. Continued use of the App after changes means you accept the updated policy.</p>
+      </section>
 
-    <section>
-      <h2>Changes to this policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. The “Effective date” at the top will reflect the latest version.
-        Continued use of the App after changes means you accept the updated policy.
-      </p>
-    </section>
+      <section class="content-card">
+        <h2>Contact</h2>
+        <p>Questions about this Privacy Policy or your data:</p>
+        <p><a href="mailto:nathanlabar21@gmail.com?subject=DIDIDOIT%20Privacy" data-completes-monitor="privacy">nathanlabar21@gmail.com</a></p>
+      </section>
+    </main>
 
-    <section>
-      <h2>Contact</h2>
-      <p>
-        Questions about this Privacy Policy or your data:
-        <a href="mailto:nathanlabar21@gmail.com?subject=DIDIDOIT%20Privacy">nathanlabar21@gmail.com</a>
-      </p>
-    </section>
-
-    <footer>
+    <footer class="page-footer">
       <p>&copy; <span id="y"></span> LaBapps. All rights reserved.</p>
-      <p><a href="index.html">Support</a></p>
+      <p><a href="index.html">Status Home</a> · <a href="support.html">Support</a></p>
     </footer>
   </div>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="shell.js"></script>
 </body>
 </html>

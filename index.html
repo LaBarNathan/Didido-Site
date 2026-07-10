@@ -3,139 +3,155 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DIDIDO? — Support</title>
-  <meta name="description" content="Support for DIDIDO?, the iOS dashboard app for tracking monitors and shared dashboards.">
-  <style>
-    :root {
-      --bg: #141619;
-      --card: #1f2129;
-      --border: #333842;
-      --accent: #4d99e6;
-      --text: #ffffff;
-      --muted: #9aa3ad;
-      --green: #33cc66;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 32px 20px 48px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    h1 {
-      font-size: 1.5rem;
-      letter-spacing: 0.2em;
-      font-weight: 700;
-      margin: 0 0 8px;
-    }
-    .tagline {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0;
-    }
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 22px;
-      margin-bottom: 16px;
-    }
-    h2 {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 12px;
-      font-weight: 600;
-    }
-    p { margin: 0 0 12px; }
-    p:last-child { margin-bottom: 0; }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
-    .contact-btn {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 12px 20px;
-      background: var(--accent);
-      color: #fff !important;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none !important;
-    }
-    .contact-btn:hover { opacity: 0.92; }
-    ul {
-      margin: 0;
-      padding-left: 1.2rem;
-    }
-    li { margin-bottom: 10px; }
-    li:last-child { margin-bottom: 0; }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.8rem;
-      margin-top: 28px;
-    }
-    .nav {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+  <title>DIDIDO? — Status</title>
+  <meta name="description" content="Explore DIDIDO? through an app-inspired landing page with monitors, status, and quick links.">
+  <link rel="stylesheet" href="shell.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>DIDIDO?</h1>
-      <p class="tagline">Monitor dashboards for home, work, and shared checklists.</p>
-    </header>
+  <div class="wrap wrap-landing">
+    <div class="shell-header">
+      <div class="status-shell">
+        <div class="status-row">
+          <div class="status-label">
+            <span class="status-prefix">DIDIDO? STATUS:</span>
+            <span class="status-value" data-status-value>Critical</span>
+          </div>
+          <div class="status-right">
+            <div class="status-percent" data-status-percent>0%</div>
+            <a class="home-button" href="index.html" aria-label="Go to Status Home">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 10.5 12 4l8 6.5"></path>
+                <path d="M7 10v9h10v-9"></path>
+              </svg>
+            </a>
+            <div class="menu">
+              <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open quick navigation" data-menu-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                  <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                  <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                </svg>
+              </button>
+              <div class="menu-panel" hidden data-menu-panel>
+                <a href="index.html">Status Home</a>
+                <a href="features.html" data-completes-monitor="features">Features</a>
+                <a href="updates.html" data-completes-monitor="updates">Recent Update</a>
+                <a href="developers.html" data-completes-monitor="developers">Developer Information</a>
+                <a href="support.html" data-completes-monitor="support">Support</a>
+                <a href="privacy.html" data-completes-monitor="privacy">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gauge" aria-label="Didido status progress bar">
+          <div class="gauge-fill">
+            <div class="segment segment-red" data-gauge-red></div>
+            <div class="segment segment-yellow" data-gauge-yellow hidden></div>
+            <div class="segment segment-green" data-gauge-green></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <p class= "nav"> Support · <a href="privacy.html">Privacy Policy</a></p>
+    <main>
+      <section id="monitors" class="monitors" aria-label="Monitors">
+        <article class="monitor-card" data-monitor-id="features" data-state="pending">
+          <div class="monitor-shell">
+            <div class="monitor-glow"></div>
+            <a class="monitor-icon-link" href="features.html" aria-label="Open Features" data-completes-monitor="features">
+              <svg class="monitor-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 19h12"></path>
+                <path d="M8 16V9"></path>
+                <path d="M12 16V5"></path>
+                <path d="M16 16v-3"></path>
+              </svg>
+            </a>
+          </div>
+          <h2 class="monitor-name"><a href="features.html" data-completes-monitor="features">Features</a></h2>
+          <p class="monitor-desc">Quick tour of dashboards, monitors, and sharing.</p>
+        </article>
 
-    <section>
-      <h2>Contact support</h2>
-      <p>Questions, bugs, or feedback? Email us and include your iOS version and a short description of the issue.</p>
-      <!-- Replace the email below with your real support address before publishing -->
-      <a class="contact-btn" href="mailto:nathanlabar21@gmail.com?subject=DIDIDO?%20Support">Email support</a>
-      <p style="margin-top:14px;font-size:0.9rem;color:var(--muted);">
-        <a href="mailto:nathanlabar21@gmail.com">nathanlabar21@gmail.com</a>
-      </p>
-    </section>
+        <article class="monitor-card" data-monitor-id="download" data-state="pending">
+          <div class="monitor-shell">
+            <div class="monitor-glow"></div>
+            <a class="monitor-icon-link" href="https://apps.apple.com/us/app/didido/id6757727326" target="_blank" rel="noopener" aria-label="Download DIDIDO? from the App Store" data-completes-monitor="download">
+              <img class="monitor-icon-logo" src="app-icon-red.png" data-download-icon alt="">
+            </a>
+          </div>
+          <h2 class="monitor-name">
+            <a href="https://apps.apple.com/us/app/didido/id6757727326" target="_blank" rel="noopener" data-completes-monitor="download">DIDIDO?</a>
+          </h2>
+          <p class="monitor-desc">Start keeping track of tasks, chores, and routines with Didido?</p>
+        </article>
 
-    <section>
-      <h2>Common questions</h2>
-      <ul>
-        <li><strong>iCloud / sharing</strong> — Dashboard sharing requires an iCloud account on each device. Open Settings → Share with Others inside the app to invite collaborators or join a shared dashboard.</li>
-        <li><strong>Collaborators can’t see updates</strong> — Both users need internet access and iCloud signed in. Pull to refresh or reopen the app; changes may take a few seconds to sync.</li>
-        <li><strong>Daily notifications</strong> — Enable “Daily Status Update” in Settings for each dashboard and allow notifications when iOS prompts you.</li>
-        <li><strong>Data storage</strong> — Local dashboards are stored on your device. Shared dashboards sync through your private iCloud account via Apple CloudKit.</li>
-      </ul>
-    </section>
+        <article class="monitor-card" data-monitor-id="updates" data-state="pending">
+          <div class="monitor-shell">
+            <div class="monitor-glow"></div>
+            <a class="monitor-icon-link" href="updates.html" aria-label="Open Recent Update" data-completes-monitor="updates">
+              <svg class="monitor-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 8v5l3 2"></path>
+                <path d="M21 12a9 9 0 1 1-3.28-6.95"></path>
+              </svg>
+            </a>
+          </div>
+          <h2 class="monitor-name"><a href="updates.html" data-completes-monitor="updates">Recent Updates</a></h2>
+          <p class="monitor-desc">Latest changes, fixes, and what shipped most recently.</p>
+        </article>
 
-    <section>
-      <h2>App information</h2>
-      <p><strong>Platform:</strong> iPhone (iOS)</p>
-      <p><strong>Developer:</strong> Nathan LaBar</p>
-      <p><strong>Bundle ID:</strong> com.LaBapps.Didido</p>
-    </section>
+        <article class="monitor-card" data-monitor-id="support" data-state="pending">
+          <div class="monitor-shell">
+            <div class="monitor-glow"></div>
+            <a class="monitor-icon-link" href="support.html" aria-label="Open Support" data-completes-monitor="support">
+              <svg class="monitor-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 18h.01"></path>
+                <path d="M9.09 9a3 3 0 1 1 5.82 1c0 2-3 3-3 3"></path>
+                <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10Z"></path>
+              </svg>
+            </a>
+          </div>
+          <h2 class="monitor-name"><a href="support.html" data-completes-monitor="support">Support</a></h2>
+          <p class="monitor-desc">View contact info and common troubleshooting steps.</p>
+        </article>
 
-    <footer>
+        <article class="monitor-card" data-monitor-id="developers" data-state="pending">
+          <div class="monitor-shell">
+            <div class="monitor-glow"></div>
+            <a class="monitor-icon-link" href="developers.html" aria-label="Open Developer Information" data-completes-monitor="developers">
+              <svg class="monitor-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 9-4 3 4 3"></path>
+                <path d="m16 9 4 3-4 3"></path>
+                <path d="m14 5-4 14"></path>
+              </svg>
+            </a>
+          </div>
+          <h2 class="monitor-name"><a href="developers.html" data-completes-monitor="developers">Developer Information</a></h2>
+          <p class="monitor-desc">About the developer, platform notes, and intent.</p>
+        </article>
+
+        <article class="monitor-card" data-monitor-id="privacy" data-state="pending">
+          <div class="monitor-shell">
+            <div class="monitor-glow"></div>
+            <a class="monitor-icon-link" href="privacy.html" aria-label="Open Privacy Policy" data-completes-monitor="privacy">
+              <svg class="monitor-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3 5 6v6c0 5 3.4 8.4 7 9 3.6-.6 7-4 7-9V6l-7-3Z"></path>
+                <path d="m9.5 12 1.7 1.7 3.3-3.8"></path>
+              </svg>
+            </a>
+          </div>
+          <h2 class="monitor-name"><a href="privacy.html" data-completes-monitor="privacy">Privacy Policy</a></h2>
+          <p class="monitor-desc">Learn how data shared with Didido? is stored locally!</p>
+        </article>
+      </section>
+      <div class="reset-row">
+        <button class="reset-button" type="button" data-reset-monitors>Reset Monitors</button>
+      </div>
+    </main>
+
+    <footer class="page-footer">
       <p>&copy; <span id="y"></span> LaBapps. All rights reserved.</p>
-      <p><a href="privacy.html">Privacy Policy</a></p>
     </footer>
   </div>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="shell.js"></script>
 </body>
 </html>
